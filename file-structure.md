@@ -1,0 +1,11 @@
+root--core
+        --services
+            -name-query
+    --pages
+    	--main
+    	    --searchbar
+    	    --results
+    	--data-visualization
+    	    --chart
+    	    --map
+    --shared
