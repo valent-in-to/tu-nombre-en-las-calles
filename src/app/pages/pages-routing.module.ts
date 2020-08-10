@@ -8,6 +8,10 @@ const routes: Routes = [
     {
         path: '',
         component: SearchbarComponent
+    },
+    {
+      path: 'view',
+      loadChildren: ()=> import('./data-visualization/data-visualization.module').then(m=> m.DataVisualizationModule)
     }
     
 ];
@@ -16,4 +20,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class MainRoutingModule { }
+export class PagesRoutingModule { }

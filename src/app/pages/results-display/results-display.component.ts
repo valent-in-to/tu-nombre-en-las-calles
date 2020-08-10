@@ -17,6 +17,9 @@ export class ResultsDisplayComponent implements OnInit {
   }
 
   loadChart(){
-    return this.router.navigate(['chart'])
+    return this.router.navigateByUrl('view/chart')
+  }
+  loadTable(){
+    return this.router.navigateByUrl('view/table')
   }
 }

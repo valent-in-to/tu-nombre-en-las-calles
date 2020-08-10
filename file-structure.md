@@ -1,11 +1,13 @@
-root--core
-        --services
-            -name-query
-    --pages
-    	--main
-    	    --searchbar
-    	    --results
-    	--data-visualization
-    	    --chart
-    	    --map
+-root
+    --core
+    --services
+       -name-query
+    --pages(module)
+       --searchbar
+       --results
+       --data-visualization(module)
+    	  --chart
+    	  --table
+    	  --map
     --shared
+      --navbar

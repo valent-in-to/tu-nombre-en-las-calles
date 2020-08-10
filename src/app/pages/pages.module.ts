@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from "@angular/forms";
-import { MainRoutingModule } from './main-routing.module';
+import { PagesRoutingModule } from './pages-routing.module';
 
 import { SearchbarComponent } from './searchbar/searchbar.component';
 
@@ -16,7 +16,7 @@ import { ResultsDisplayComponent } from './results-display/results-display.compo
     ResultsDisplayComponent],
   imports: [
     CommonModule,
-    MainRoutingModule,
+    PagesRoutingModule,
     FormsModule,
     HttpClientModule
   ],
@@ -25,4 +25,4 @@ import { ResultsDisplayComponent } from './results-display/results-display.compo
   ],
   bootstrap: [SearchbarComponent]
 })
-export class MainModule { }
+export class PagesModule { }

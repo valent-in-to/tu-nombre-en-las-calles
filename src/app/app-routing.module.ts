@@ -5,11 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
   path: '',
-  loadChildren : ()=> import('./pages/main/main.module').then(m=> m.MainModule)
-  },
-  {
-    path: 'chart',
-    loadChildren: ()=> import('./pages/data-visualization/data-visualization.module').then(m=> m.DataVisualizationModule)
+  loadChildren : ()=> import('./pages/pages.module').then(m=> m.PagesModule)
   }
 ];
 
