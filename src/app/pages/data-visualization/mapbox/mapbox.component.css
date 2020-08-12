@@ -1,0 +1,14 @@
+.map-container{
+    width: 80vw;
+    height: 85vh;
+    margin: 1rem;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h4{
+    margin: 1rem;
+}

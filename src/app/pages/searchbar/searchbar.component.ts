@@ -3,7 +3,6 @@ import { NameQueryService } from 'src/app/core/services/name-query.service';
 import { NgForm } from '@angular/forms';
 
 import { DataSharingService } from "src/app/core/services/data-sharing.service";
-import { type } from 'os';
 
 
 @Component({

@@ -22,4 +22,7 @@ export class ResultsDisplayComponent implements OnInit {
   loadTable(){
     return this.router.navigateByUrl('view/table')
   }
+  loadMapBox(){
+    return this.router.navigateByUrl('view/mapbox')
+  }
 }

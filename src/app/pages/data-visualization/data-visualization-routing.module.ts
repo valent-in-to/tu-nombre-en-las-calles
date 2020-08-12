@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ChartComponent } from './chart/chart.component';
 import { TableComponent } from './table/table.component';
 import { MapComponent } from './table/map/map.component';
+import { MapboxComponent } from './mapbox/mapbox.component';
 
 
 
@@ -19,6 +20,10 @@ const routes: Routes = [
     {
       path: 'map',
       component: MapComponent
+    },
+    {
+      path: 'mapbox',
+      component: MapboxComponent
     }
 ];
 
