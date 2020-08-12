@@ -19,7 +19,7 @@ export class MapComponent implements OnInit {
     private dataSharing: DataSharingService,
     private sanitizer: DomSanitizer ) {
 
-    this.key = 'AIzaSyCMA5Gx_1Llmmk12FsYQLC-9MUB0qDOABQ'
+    this.key = 'YOUR_GOOGLE_KEY'
      }
 
   ngOnInit(): void {
