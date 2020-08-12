@@ -1,20 +1,22 @@
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th>Tipo</th>
-            <th>Nombre</th>
-            <th>Dpto.</th>
-            <th>Localidad</th>
-            <th>Provincia</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let i of data">
-            <td>{{ i.tipo }}</td>
-            <td>{{ i.nombre }}</td>
-            <td>{{ i.departamento }}</td>
-            <td>{{ i.localidad }}</td>
-            <td>{{ i.provincia }}</td>
-        </tr>
-    </tbody>
-</table>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Tipo</th>
+                <th>Nombre</th>
+                <th>Dpto.</th>
+                <th>Localidad</th>
+                <th>Provincia</th>
+                <th>Ver en mapa <br><span style="font-size: 0.8rem;">(No funciona en todas)</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of data">
+                <td>{{ i.tipo }}</td>
+                <td>{{ i.nombre }}</td>
+                <td>{{ i.departamento }}</td>
+                <td>{{ i.localidad }}</td>
+                <td>{{ i.provincia }}</td>
+                <td><button (click)="loadMap(i.nomenclatura)" class="btn btn-success">Ver en mapa</button></td>
+            </tr>
+        </tbody>
+    </table>

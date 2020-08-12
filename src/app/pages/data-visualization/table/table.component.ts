@@ -12,6 +12,7 @@ export class TableComponent implements OnInit {
 
   results:any;
   data: TableData[]
+
   constructor( private dataSharing: DataSharingService,
     private router: Router ) { }
 
@@ -23,6 +24,7 @@ export class TableComponent implements OnInit {
     }
 
     this.prepareTable()
+   
   }
 
   prepareTable(){
@@ -30,14 +32,25 @@ export class TableComponent implements OnInit {
 
     for(let i = 0; i < this.results.length; i++){
       let data = <TableData>{}
+
       data.tipo = this.results[i].categoria;
       data.nombre = this.results[i].nombre
       data.departamento = this.results[i].departamento.nombre;
       data.localidad = this.results[i].localidad_censal.nombre;
       data.provincia = this.results[i].provincia.nombre;
+      data.nomenclatura = this.results[i].nomenclatura
       dataArray.push(data)
     }
+    dataArray.shift ()
     return this.data = dataArray
   }
 
+  loadMap(info){
+    this.dataSharing.setMapAddress(info)
+    return this.router.navigate(['view','map'])
+  }
+
+
 }
+
+

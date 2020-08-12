@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ChartComponent } from './chart/chart.component';
 import { TableComponent } from './table/table.component';
+import { MapComponent } from './table/map/map.component';
+
 
 
 const routes: Routes = [
@@ -13,6 +15,10 @@ const routes: Routes = [
     {
       path: 'table',
       component: TableComponent
+    },
+    {
+      path: 'map',
+      component: MapComponent
     }
 ];
 

@@ -6,7 +6,7 @@ export const environment = {
   production: false,
 
   streetsAPI: 'https://apis.datos.gob.ar/georef/api/calles',
-  chartsAPI: 'http://chart.apis.google.com/chart'
+  chartsAPI: 'http://chart.apis.google.com/chart',
 };
 
 /*

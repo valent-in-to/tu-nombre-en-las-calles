@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 export class ResultsDisplayComponent implements OnInit {
 
-  @Input('results') results: number;
-  @Input('name') name: string;
+  @Input() results: number;
+  @Input() name: string;
 
   constructor( private router: Router ) { }
 

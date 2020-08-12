@@ -3,6 +3,7 @@ import { NameQueryService } from 'src/app/core/services/name-query.service';
 import { NgForm } from '@angular/forms';
 
 import { DataSharingService } from "src/app/core/services/data-sharing.service";
+import { type } from 'os';
 
 
 @Component({
@@ -25,17 +26,16 @@ export class SearchbarComponent implements OnInit {
   }
 
   getStreets(form: NgForm){
-    this.name = form.value.name
+    this.name = form.value.name 
     
     return this.nameQuery.fetchStreets(this.name).then((x:any) => {
       // Como la api devuelve no sólo nombres iguales sino parecidos debo filtrar los objetos en el cliente 
       this.results = x.calles.filter(each=>{
-        //Solo incluyo los que contienen la palabra exacta, no los que la tienen como parte de otra palabra (ej: martin-martinez) 
+      /*  Solo incluyo los que contienen la palabra exacta, no los que la tienen como parte de otra palabra (ej: martin-martinez), si los que 
+        la contienen como parte de un nombre compuesto por mas palabras (ej: martin rodriguez)*/
         return each.nombre.match(RegExp(`\\b${this.name}\\b`, 'i'))
       })
-      console.log(this.results, this.name)
       this.dataSharing.setData(this.results); //envio la lista completa al servicio compartido con el modulo de visualizacion de la informacion
-      
       },err =>{
         console.log(err)
       });

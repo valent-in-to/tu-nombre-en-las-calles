@@ -9,6 +9,8 @@ import { Injectable } from '@angular/core';
 export class DataSharingService {
 
   public results_data: any;
+  public map_address: any;
+
   constructor() { }
 
   public setData(data): void{
@@ -17,5 +19,13 @@ export class DataSharingService {
   
   public getData(): any{
     return this.results_data;
+  }
+
+  public setMapAddress(info): void{
+    this.map_address = info;
+  }
+
+  public getMapAddress(){
+    return this.map_address
   }
 }

@@ -6,9 +6,9 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
           </div>
-          <input type="text" name="name" ngModel #name="ngModel" required class="form-control" placeholder="Escibí tu nombre">
+          <input type="text" name="name" [ngModel]="name"  required class="form-control" placeholder="Escibí tu nombre">
       </div>
       <button type="submit" class="btn btn-primary"><b>Buscar</b></button>
     </form>
-    <app-results-display *ngIf="this.results"[results]="results.length" ></app-results-display>
+    <app-results-display *ngIf="this.results"[results]="results.length" [name]="name" ></app-results-display>
 </div>

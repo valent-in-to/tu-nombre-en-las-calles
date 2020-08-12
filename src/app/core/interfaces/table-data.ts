@@ -3,5 +3,6 @@ export interface TableData {
     nombre
     departamento
     localidad
-    provincia    
+    provincia  
+    nomenclatura  
 }

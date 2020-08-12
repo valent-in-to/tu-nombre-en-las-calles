@@ -1,6 +1,6 @@
 <div class="container" *ngIf="this.results">
     <h4 class="mt-3 mb-3">
-        Se encontraron <span style="color: red;">{{ results }}</span> calles con ese nombre en todo el país.
+        Se encontraron <span style="color: red;">{{ results }}</span> calles con el nombre {{ this.name }} en todo el país.
     </h4>
     <div class="btn-group" role="group">
         <a  class="btn btn-primary" (click)="loadChart()"><i class="fas fa-chart-pie"></i> Ver gráfico por provincias</a>
@@ -11,6 +11,6 @@
 </div>
 <div class="container" *ngIf="!this.results">
     <h4>
-        No hay ninguna calle con tu nombre en todo el país :( 
+        No hay ninguna calle con tu nombre en todo el país, {{ this.name }} :( 
     </h4>
 </div>
