@@ -42,7 +42,7 @@ export class ChartComponent implements OnInit {
     }
 
     let provincias_set = new Object()  // objeto con una key por cada povincia en la que haya una calle con ese nombre, 
-    provincias.map(x=>{        //si existe el nombre como key agrego uno a la suma si no creo la key y le asigno el valor 1
+    provincias.map(x=>{        //si existe el nombre como key agrego uno a la suma, si no, creo la key y le asigno el valor 1
       if(provincias_set[x]){
         provincias_set[x] += 1; 
       }else{
@@ -63,8 +63,8 @@ export class ChartComponent implements OnInit {
         datasets: [  
           {  
             data: Object.values(this.provincias),  
-            borderColor: '#3cb371',  
-            backgroundColor: "#0000FF",  
+            borderColor: '#1b1e23',  
+            backgroundColor: "#1b1e23",  
           }  
         ]  
       },  
@@ -78,7 +78,11 @@ export class ChartComponent implements OnInit {
             display: true  
           }],  
           yAxes: [{  
-            display: true  
+            display: true ,
+            ticks:{
+              precision: 0,
+              beginAtZero: true,
+            }
           }],  
         }  
       }});  

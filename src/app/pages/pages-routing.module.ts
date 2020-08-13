@@ -2,12 +2,17 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
     {
         path: '',
         component: SearchbarComponent
+    },
+    {
+      path: 'about',
+      component: AboutComponent
     },
     {
       path: 'view',

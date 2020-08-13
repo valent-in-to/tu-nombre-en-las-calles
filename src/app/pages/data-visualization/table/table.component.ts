@@ -45,10 +45,6 @@ export class TableComponent implements OnInit {
     return this.data = dataArray
   }
 
-  loadMap(info){
-    this.dataSharing.setMapAddress(info)
-    return this.router.navigate(['view','map'])
-  }
 
 
 }

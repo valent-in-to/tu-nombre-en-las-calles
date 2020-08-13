@@ -26,7 +26,10 @@ export class SearchbarComponent implements OnInit {
 
   getStreets(form: NgForm){
     this.name = form.value.name 
-    
+    if(!this.name){
+      return
+    }
+  
     return this.nameQuery.fetchStreets(this.name).then((x:any) => {
       // Como la api devuelve no sólo nombres iguales sino parecidos debo filtrar los objetos en el cliente 
       this.results = x.calles.filter(each=>{

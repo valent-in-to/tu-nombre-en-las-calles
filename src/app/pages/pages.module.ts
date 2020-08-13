@@ -8,12 +8,14 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import { HttpClientModule } from "@angular/common/http";
 
 import { NameQueryService } from 'src/app/core/services/name-query.service';
-import { ResultsDisplayComponent } from './results-display/results-display.component';
+import { ResultsDisplayComponent } from './searchbar/results-display/results-display.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
   declarations: [SearchbarComponent,
-    ResultsDisplayComponent],
+    ResultsDisplayComponent,
+    AboutComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
